@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "manifest": "samples.tsv",
+  "output_root": "results/fastp",
+  "fastp": {
+    "executable": "fastp",
+    "expected_version": "1.0.1",
+    "threads": 4,
+    "detect_adapter_for_pe": true,
+    "cut_front": true,
+    "cut_tail": true,
+    "cut_window_size": 4,
+    "cut_mean_quality": 20,
+    "length_required": 50
+  },
+  "prodigal": {
+    "executable": "prodigal",
+    "expected_version": "2.6.3",
+    "mode": "meta",
+    "translation_table_argument": 11,
+    "closed_ends": false,
+    "minimum_contig_length": 500,
+    "output_root": "results/prodigal"
+  },
+  "mag": {
+    "threads": 4,
+    "metabat_min_contig": 1500,
+    "metabat_seed": null,
+    "drep_scoring": null,
+    "checkm2_database": "",
+    "gtdbtk_database": "",
+    "gtdb_release": "226",
+    "tools": {
+      "bowtie2_build": {
+        "executable": "bowtie2-build",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": null
+      },
+      "bowtie2": {
+        "executable": "bowtie2",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": null
+      },
+      "samtools": {
+        "executable": "samtools",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": null
+      },
+      "depth": {
+        "executable": "jgi_summarize_bam_contig_depths",
+        "version_args": [
+          "--help"
+        ],
+        "expected_version_text": null
+      },
+      "metabat2": {
+        "executable": "metabat2",
+        "version_args": [
+          "--help"
+        ],
+        "expected_version_text": "2.18"
+      },
+      "checkm2": {
+        "executable": "checkm2",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": "1.1.0"
+      },
+      "drep": {
+        "executable": "dRep",
+        "version_args": [
+          "-h"
+        ],
+        "expected_version_text": "3.6.2"
+      },
+      "mash": {
+        "executable": "mash",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": null
+      },
+      "fastani": {
+        "executable": "fastANI",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": null
+      },
+      "gtdbtk": {
+        "executable": "gtdbtk",
+        "version_args": [
+          "--version"
+        ],
+        "expected_version_text": "2.6.1"
+      }
+    }
+  },
+  "study_records_not_executed_by_this_wrapper": {
+    "diamond": {
+      "search_identity_percent": 40,
+      "query_coverage_percent": 80,
+      "max_target_sequences": 1,
+      "reported_final_identity_percent": 80,
+      "final_max_evalue": 1e-05
+    }
+  }
+}

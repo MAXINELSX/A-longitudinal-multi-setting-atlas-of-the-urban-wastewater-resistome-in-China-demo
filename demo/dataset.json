@@ -1,0 +1,52 @@
+{
+  "selected_date": "2026-10-13",
+  "selection_criterion": "Tong Zhang group original influent metagenomic data",
+  "run_accession": "SRR14234107",
+  "experiment_accession": "SRX10597283",
+  "biosample_accession": "SAMN18738345",
+  "secondary_sample_accession": "SRS8699184",
+  "bioproject_accession": "PRJNA721748",
+  "study_accession": "SRP314742",
+  "sample_alias": "ST_IN_0406_merged",
+  "sample_type": "influent",
+  "collection_date": "2018-04-06",
+  "geo_loc_name": "Hong Kong",
+  "isolation_source": "ST wastewater treatment plant",
+  "library_strategy": "WGS",
+  "library_source": "METAGENOMIC",
+  "library_selection": "RANDOM",
+  "library_layout": "PAIRED",
+  "instrument_model": "HiSeq X Ten",
+  "spot_count": 33648454,
+  "reads_per_spot": 2,
+  "read_length_each_mate": 150,
+  "base_count": 10094536200,
+  "total_compressed_fastq_bytes": 4989936269,
+  "fastq_files": [
+    {
+      "mate": 1,
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR142/007/SRR14234107/SRR14234107_1.fastq.gz",
+      "bytes": 2398746660,
+      "md5": "138a7447b09111f0069d69903f760971"
+    },
+    {
+      "mate": 2,
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR142/007/SRR14234107/SRR14234107_2.fastq.gz",
+      "bytes": 2591189609,
+      "md5": "887170b7c18be90cba1e46ad9657e3fd"
+    }
+  ],
+  "data_owner": "Hong Kong University",
+  "submission_laboratory": "Civil Engineering",
+  "named_submitter": "Xiaole Yin",
+  "group": "Professor Tong Zhang research group, The University of Hong Kong",
+  "group_provenance": "NCBI names Xiaole Yin and Hong Kong University/Civil Engineering as the submitter and institution; the contemporaneous HKU official article identifies Xiaole Yin as a PhD student in Tong Zhang research group. SRA records original submitted FASTQ files.",
+  "sources": {
+    "ncbi_biosample": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=biosample&id=18738345&rettype=xml",
+    "ncbi_sra_experiment_package": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=sra&id=14074183&rettype=xml",
+    "official_group_membership": "https://lead.hku.hk/en/article/2021/09/hku-engineering-team-develops-a-useful-framework-to-identify-high-risk-antibiotic-resistance-genes/",
+    "ena_file_report": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR14234107&result=read_run&fields=run_accession,study_accession,experiment_accession,sample_accession,secondary_sample_accession,sample_alias,library_strategy,library_layout,instrument_model,read_count,base_count,fastq_ftp,fastq_bytes,fastq_md5&format=tsv",
+    "ena_run": "https://www.ebi.ac.uk/ena/browser/api/xml/SRR14234107"
+  },
+  "download_scope": "Complete paired ENA FASTQ files; no read subset included"
+}

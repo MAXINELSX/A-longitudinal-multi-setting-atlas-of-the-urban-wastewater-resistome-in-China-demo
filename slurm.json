@@ -1,0 +1,45 @@
+{
+  "prodigal": {
+    "script": "cluster/prodigal.sh",
+    "sbatch_arguments": [
+      "-J",
+      "prodigal_gff",
+      "-p",
+      "cn-short",
+      "-N",
+      "1",
+      "--ntasks=1",
+      "--cpus-per-task=8",
+      "--no-requeue",
+      "-A",
+      "tangs_g1",
+      "--qos=tangscns",
+      "-o",
+      "/home/tangs/tangs_lisx/lustre1/usb_copy/prodigal/logs/%x_%A.out",
+      "-e",
+      "/home/tangs/tangs_lisx/lustre1/usb_copy/prodigal/logs/%x_%A.err"
+    ]
+  },
+  "assembly": {
+    "script": "cluster/fastp_megahit.sh",
+    "sbatch_arguments": [
+      "-J",
+      "fp_mh_J007_01",
+      "-p",
+      "cn-long",
+      "-N",
+      "1",
+      "--ntasks=1",
+      "--cpus-per-task=30",
+      "--time=24:00:00",
+      "--no-requeue",
+      "-A",
+      "tangs_g1",
+      "--qos=tangscnl",
+      "-o",
+      "/home/tangs/tangs_lisx/lustre1/usb_copy/ass/logs/%x_%A_%a.out",
+      "-e",
+      "/home/tangs/tangs_lisx/lustre1/usb_copy/ass/logs/%x_%A_%a.err"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+sample_id	assembly	r1	r2
+SRR14234107	results/megahit/SRR14234107/final.contigs.fa	results/fastp/SRR14234107/R1.clean2.fq.gz	results/fastp/SRR14234107/R2.clean2.fq.gz
