@@ -1,4 +1,4 @@
-Wastewater metagenome processing code
+# Wastewater metagenome processing code
 
 This package provides read quality control, sample assembly, gene prediction, MAG reconstruction and processing of existing annotation tables. Configuration is stored in `config.json`; detailed command-line options and input formats are in [USAGE](docs/USAGE.md).
 
