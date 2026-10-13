@@ -29,6 +29,9 @@ These are configured versions, not a claim that the external tools were tested i
 
 The supplied QC and MAG configurations use four threads. Adjust thread counts to the resources allocated to your job. Optional MAG seed and representative-scoring values of `null` retain the installed software defaults. Installation time, including reference database downloads, has not been measured on a normal desktop computer.
 
+## Estimated installation time: 
+Allow approximately 1–3 hours to install the software dependencies on Linux with a stable internet connection. Reference database downloads and extraction require additional time. This is a planning estimate, not a measured clean-install benchmark.
+
 ## Complete influent example
 
 The example uses **all paired reads from [SRR14234107](https://www.ncbi.nlm.nih.gov/sra/?term=SRR14234107)**, BioProject [PRJNA721748](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA721748), from the Tong Zhang group at The University of Hong Kong. Sample `ST_IN_0406_merged` is wastewater influent collected in Hong Kong on 6 April 2018. Its 33,648,454 PE150 read pairs contain 10,094,536,200 bases. The two compressed FASTQ files total 4,989,936,269 bytes, approximately 4.99 GB. Accession metadata, provenance links, download locations and MD5 values are in [dataset.json](demo/dataset.json).
@@ -67,9 +70,8 @@ python scripts/mag_workflow.py --config config.json --samples mag_samples.tsv --
 
 Use a new output directory without spaces. Expected outputs include `contig_to_bin.tsv`, `bin_quality.tsv`, `retained_bins.tsv`, `catalogue_mapping.tsv`, `retained_taxonomy.tsv`, retained genome FASTA files and stage logs. `COMPLETE` is written only after all stages and output checks succeed. The workflow retains quality-filtered genomes before dereplication as well as their mapping to catalogue representatives. MAG yield is data-dependent; a run with no bins or no quality-passing bins stops with a descriptive error.
 
-### Runtime
-
-Installation and complete-sample runtime have not been measured on a normal desktop. For an approximately 10 Gbp sample on an approximately 60-core node with sufficient RAM and installed databases, **8–24 hours** is a preliminary scheduling estimate for the broader processing workflow. This is not a benchmark of SRR14234107; it excludes downloads, installation and queue time. The four-thread examples above may take longer.
+## Estimated demo runtime: 
+For the approximately 10 Gbp example dataset, allow approximately 8–24 hours on a compute node with approximately 60 CPU cores, sufficient RAM and preinstalled reference databases. This is a preliminary scheduling estimate, not a measured benchmark of SRR14234107. It excludes installation, downloads and queue time. We do not recommend to run on the desktop due to the MEMEORY limit. Runtime for the complete pipeline on a standard desktop computer has not been benchmarked.
 
 ## Use with your data
 
