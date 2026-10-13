@@ -79,4 +79,6 @@ The table-processing modules accept existing alignment results and existing cont
 
 ## License and release
 
-The package license has not yet been assigned, and this package version has not been published as a repository release. External software and public data retain their respective licenses and terms.
+The custom source code in this repository is distributed under the MIT License (see [LICENSE](LICENSE)). Third-party software, dependencies, and public data retain their respective licenses and terms.
+
+This package version has not been published as a repository release.
