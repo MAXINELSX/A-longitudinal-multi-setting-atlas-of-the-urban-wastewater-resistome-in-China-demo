@@ -5,18 +5,21 @@ This package provides read quality control, sample assembly, gene prediction, MA
 ## System requirements
 
 The Python scripts require Python 3.9 or later and use only its standard library. Scientific tools are intended to run on Linux; Slurm is needed only for the cluster submission scripts. No GPU is required. The scientific-tool Linux distribution and full-sample resource usage have not been measured. MAG classification requires substantial RAM and database storage; use an appropriately provisioned compute node.
+The cluster login node runs Rocky Linux 8.8 (Green Obsidian). Scientific tools require Linux; Slurm is required only for the cluster submission scripts. No GPU is required.
 
 | Component | Configured study version | Installation documentation |
 | --- | --- | --- |
 | fastp | 1.0.1 | [fastp](https://github.com/OpenGene/fastp) |
 | MEGAHIT | 1.2.9 | [MEGAHIT](https://github.com/voutcn/megahit) |
 | Prodigal | 2.6.3 | [Prodigal](https://github.com/hyattpd/Prodigal) |
-| Bowtie2 and samtools | Set the installed versions in `config.json` | [Bowtie2](https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml), [samtools](https://www.htslib.org/download/) |
-| MetaBAT2 and `jgi_summarize_bam_contig_depths` | MetaBAT2 2.18; record the installed depth-tool version text | [MetaBAT2](https://bitbucket.org/berkeleylab/metabat/src/master/) |
+| Bowtie2 | 2.5.5 | [Bowtie2](https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml) |
+| SAMtools | 1.24 | [SAMtools](https://www.htslib.org/download/) |
+| MetaBAT2 and its bundled `jgi_summarize_bam_contig_depths` utility | MetaBAT2 2.18 | [MetaBAT2](https://bitbucket.org/berkeleylab/metabat/src/master/) |
 | CheckM2 | 1.1.0, with its compatible DIAMOND database | [CheckM2](https://github.com/chklovski/CheckM2) |
 | dRep | 3.6.2 | [dRep](https://drep.readthedocs.io/en/latest/installation.html) |
-| Mash and FastANI | Set the installed versions in `config.json` | [Mash](https://github.com/marbl/Mash), [FastANI](https://github.com/ParBLiSS/FastANI) |
-| GTDB-Tk | 2.6.1, reference release r226 | [GTDB-Tk 2.6.1](https://github.com/Ecogenomics/GTDBTk/tree/2.6.1) |
+| Mash | 2.3 | [Mash](https://github.com/marbl/Mash) |
+| FastANI | 1.34 | [FastANI](https://github.com/ParBLiSS/FastANI) |
+| GTDB-Tk | 2.6.1, with GTDB reference release r226 | [GTDB-Tk 2.6.1](https://github.com/Ecogenomics/GTDBTk/tree/2.6.1) |
 
 These are configured versions, not a claim that the external tools were tested in this package. The Python modules were tested with Python 3.12.14 on Windows 11 build 26200 using synthetic inputs and mocked scientific-tool calls. The complete public run and real scientific tools have not been processed here.
 
