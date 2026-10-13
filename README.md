@@ -4,8 +4,8 @@ This package provides read quality control, sample assembly, gene prediction, MA
 
 ## System requirements
 
-The Python scripts require Python 3.9 or later and use only its standard library. Scientific tools are intended to run on Linux; Slurm is needed only for the cluster submission scripts. No GPU is required. The scientific-tool Linux distribution and full-sample resource usage have not been measured. MAG classification requires substantial RAM and database storage; use an appropriately provisioned compute node.
-The cluster login node runs Rocky Linux 8.8 (Green Obsidian). Scientific tools require Linux; Slurm is required only for the cluster submission scripts. No GPU is required.
+The Python scripts require Python 3.9 or later and use only its standard library. The cluster login node runs Rocky Linux 8.8 (Green Obsidian). Scientific tools require Linux; Slurm is required only for the cluster submission scripts. No GPU is required. The scientific-tool Linux distribution and full-sample resource usage have not been measured. MAG classification requires substantial RAM and database storage; use an appropriately provisioned compute node.
+
 
 | Component | Configured study version | Installation documentation |
 | --- | --- | --- |
